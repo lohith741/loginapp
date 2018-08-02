@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<title>Tranbit registration</title>
+</h:head>
+<h:body>
+<h:form>
+<center>
+<h4 >Resistration Form</h4>
+<table>
+<tr>
+<td>First Name:</td>
+<td>
+<h:inputText label="First Name"
+id="fname" value="#{userBean.firstName}"
+required="true"/>
+<h:message for="fname" />
+</td>
+</tr>
+<tr>
+<td>Last Name:</td>
+<td>
+<h:inputText label="Last Name"
+id="lname" value="#{userBean.lastName}"
+required="true"/>
+<h:message for="lname" />
+</td>
+</tr>
+
+<tr>
+<td>Login Id:</td>
+<td>
+<h:inputText label="Loginid"
+id="login" value="#{userBean.loginid}"
+required="true"/>
+<h:message for="login" />
+</td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td>
+<h:inputText label="Passwordd"
+id="passcode" value="#{userBean.password}"
+required="true"/>
+<h:message for="passcode" />
+</td>
+</tr>
+
+<tr>
+<td>Confirm Password</td>
+<td>
+<h:inputText label="confPassword"
+id="confpasscode" value="#{userBean.confpassword}"
+required="true" 
+validator="#{userBean.validatePassword}"/>
+<h:message for="confpasscode" />
+</td>
+</tr>
+
+<tr>
+<td>Date of Birth:</td>
+<td>
+<h:inputText label="Date of Birth"
+id="dob" value="#{userBean.dob}" required="true">
+<f:convertDateTime pattern="MM-dd-yy" />
+</h:inputText> (mm-dd-yy)
+<h:message for="dob" />
+</td>
+</tr>
+
+<tr>
+<td>Email Address:</td>
+<td>
+<h:inputText label="Email Address"
+id="email" value="#{userBean.email}"
+required="true"
+validator="#{userBean.validateEmail}"/>
+<h:message for="email" />
+</td>
+</tr>
+
+</table>
+<p><h:messages /></p>
+<p><h:commandButton value="Reset" action="register" />  <h:commandButton value="register"  process="@form" action="confirm?faces-redirect=true" /></p>
+</center>
+</h:form>
+
+</h:body>
+</html>

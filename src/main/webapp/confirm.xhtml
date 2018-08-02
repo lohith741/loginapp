@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Confirmation Page</title>
+</head>
+<h:body>
+<h:form>
+<center>
+<p>First name: <h:outputText value= "#{userBean.firstName}"/><br/>
+Last name: <h:outputText value = "#{userBean.lastName}"/><br/>
+Date of Birth: <h:outputText value = "#{userBean.dob}"/><br/>
+Login ID: <h:outputText value = "#{userBean.loginid}"/><br/>
+Password: <h:outputText value = "#{userBean.password}"/><br/>
+Email: <h:outputText value = "#{userBean.email}"/></p>
+
+<p><h:commandButton value="Edit" action="register" /> <h:commandButton value="confirm" action="loginpage2?faces-redirect=true" /></p>
+</center>
+</h:form>
+</h:body>
+</html>

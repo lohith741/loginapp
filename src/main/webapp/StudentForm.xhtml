@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<title>student form</title>
+</head>
+<body>
+	<h:form style="align:center">
+		<h2>Student Registration</h2>
+		<table>
+			<tr>
+				<td>Name:</td>
+				<td><h:inputText label="Name" id="name"
+						value="#{database.name}" required="true" /> <h:message for="name" />
+				</td>
+			</tr>
+
+
+			<tr>
+				<td>Enrollment:</td>
+				<td><h:inputText label="Enrollment" id="enrollment"
+						value="#{database.enrollment}" required="true" /> <h:message
+						for="enrollment" /></td>
+			</tr>
+
+			<tr>
+				<td>Branch:</td>
+				<td><h:inputText label="Branch" id="branch"
+						value="#{database.branch}" required="true" /> <h:message
+						for="branch" /></td>
+			</tr>
+
+			<tr>
+				<td>sem:</td>
+				<td><h:inputText label="Sem" id="sem" value="#{database.sem}"
+						required="true" /> <h:message for="sem" /></td>
+			</tr>
+
+			<tr>
+				<td>Gender:</td>
+				<td><h:inputText label="Gender" id="gender"
+						value="#{database.gender}" required="true" /> <h:message
+						for="gender" /></td>
+			</tr>
+
+			<tr>
+				<td>dob:</td>
+				<td><h:inputText label="dob" id="Dob" value="#{database.dob}"
+						required="true" /> <h:message for="Dob" /></td>
+			</tr>
+
+			<tr>
+				<td>Resume:</td>
+				<td><h:inputText label="Resume" id="resume"
+						value="#{database.resume}" required="true" /> <h:message
+						for="resume" /></td>
+			</tr> 
+
+			<tr>
+				<td></td>
+				<td><h:commandButton value="Insert" process="@form" action="#{database.add}" /></td>
+			</tr>
+
+
+		</table>
+		<h:commandButton value="Log out"
+						action="loginpage?faces-redirect=true" />
+	</h:form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+<head>
+<title>Transbit login</title>
+</head>
+<body>
+<h:form>
+<center>
+<h2>WELCOME TO TRANSBIT!!</h2>
+<h4>Registration Successfull!!</h4>
+
+<table>
+<tr>
+<td>Login ID</td>
+<td>
+<h:inputText label="loginid"
+id="login" value="#{userBean.loginid}"
+required="true"/>
+<h:message for="login" />
+</td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td>
+<h:inputText label="password"
+id="passcode" value="#{userBean.password}"
+required="true"/>
+<h:message for="passcode" />
+</td>
+</tr>
+
+
+</table>
+<p><h:messages /></p>
+<p><h:commandButton value="login" action="StudentForm?faces-redirect=true" /> <h:commandButton value="sign up" action="register" /></p>
+</center>
+</h:form>
+</body>
+</html>
